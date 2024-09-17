@@ -4,9 +4,10 @@
 
 ## 如何使用
 
+### 错误提示
+
 如果你安装 MCSManager Daemon，在启动时遇到下面的错误：
 
-```
 ```
 root@onecloud:/opt/mcsmanager/daemon# /opt/node-v16.20.2-linux-armv7l/bin/node app.js
 [09/16 18:24:42] [INFO] All feature modules and permission firewalls have been initialized successfully
@@ -45,3 +46,30 @@ Error: Dependency files are missing and cannot be started. Please reinstall the 
 ```
 
 如你所见，其中提示缺失文件: `/opt/mcsmanager/daemon/lib/pty_linux_arm`
+
+### 获取 lib
+
+拆分这个路径：
+
+- `/opt/mcsmanager/daemon/lib/` - 你的 lib 目录
+- `pty` - lib 名称
+- `linux_arm` - 架构
+
+#### 直接下载构建好的库文件
+
+查找 `本 repo` -> `dist` -> 你的架构
+
+如果找到，复制里面的两个文件到你的 lib 目录:
+
+- `file_zip_你的架构`
+- `pty_你的架构`
+
+再次启动 MCSM 即可.
+
+#### 手动构建
+
+如果没有你的版本，可以选择手动构建:
+
+1. 获取源代码
+
+进入本仓库的子模块，或在
