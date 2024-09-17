@@ -72,4 +72,23 @@ Error: Dependency files are missing and cannot be started. Please reinstall the 
 
 1. 获取源代码
 
-进入本仓库的子模块 `pty-src`, `zip-tools-src` 并切换到主分支 (或在 `你的 libs 目录` -> ``)
+进入本仓库的子模块 `pty-src`, `zip-tools-src` 并切换到主分支 (或在 `你的 libs 目录` -> `source-code.txt` 查找两个 repo)
+
+在目标机器上 clone repo，或直接下载仓库源码 / Release
+
+2. 编译
+
+首先确认你已经安装了 Go > `1.21` *(最好是最新版本?)*
+
+然后依次进入两个仓库的根目录，并执行 `go build` 以编译
+
+> 大陆机器可能需要设置环境变量 `http_proxy`, `https_proxy` 来指定代理下载
+
+3. 放置 lib 文件
+
+重命名产物:
+
+- PTY -> `pty_你的架构`
+- zip-tools -> `file_zip_你的架构`
+
+将它们放入你的 lib 目录，再次启动 MCSM 即可.
