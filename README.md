@@ -72,4 +72,4 @@ Error: Dependency files are missing and cannot be started. Please reinstall the 
 
 1. 获取源代码
 
-进入本仓库的子模块，或在
+进入本仓库的子模块 `pty-src`, `zip-tools-src` 并切换到主分支 (或在 `你的 libs 目录` -> ``)
