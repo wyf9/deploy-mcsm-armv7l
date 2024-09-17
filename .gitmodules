@@ -1,0 +1,6 @@
+[submodule "pty-src"]
+	path = pty-src
+	url = git@github.com:MCSManager/PTY.git
+[submodule "zip-tools-src"]
+	path = zip-tools-src
+	url = git@github.com:MCSManager/Zip-Tools.git
