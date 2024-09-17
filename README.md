@@ -105,7 +105,7 @@ cd ..
 
 重命名产物:
 
-- PTY -> `pty_你的架构`
-- Zip-Tools -> `file_zip_你的架构`
+- PTY (`pty`) -> `pty_你的架构`
+- Zip-Tools (`file-zip`) -> `file_zip_你的架构`
 
 将它们放入你的 lib 目录，再次启动 MCSM 即可.
